@@ -1,0 +1,129 @@
+@import './node_modules/susy/sass/susy/';
+
+$susy: (
+  'columns': susy-repeat(12),
+  'gutters': 0.25rem,
+  'spread': 'narrow',
+  'container-spread': 'narrow',
+);
+
+* {
+  font-size: 20px;
+  background-color: rgb(214, 214, 250);
+  color: black;
+}
+
+body {
+  justify-content: center;
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+
+  &__logo {
+    display: flex;
+    width: 100px;
+    height: 80px;
+    width: span(2 narrow of 12 narrow);
+  }
+
+  &__pic {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &__menu {
+    margin: 0 0 0 auto;
+  }
+
+  &__menu ul li {
+    margin-right: gutter() * 10;
+    width: span(3 narrow of 12 narrow);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.info{
+  margin: 0 auto gutter() * 4;
+  width: span(9);
+  padding: gutter();
+  display: flex;
+}
+
+[data-push="1"]{
+  margin-left: span(1 wide of 12 narrow);
+}
+[data-span="3"]{
+  width: span(3 narrow of 12 narrow);
+}
+[data-span="4"]{
+  width: span(4 narrow of 12 narrow);
+}
+
+
+.main {
+  &__content {
+    display: flex;
+  }
+
+  &__poster {
+    background-image: url('https://cdn.pixabay.com/photo/2013/07/13/13/12/raccoon-160556_960_720.png');
+    background-repeat: no-repeat;
+    width: span(7 narrow of 12 narrow);
+    height: 500px;
+    background-size: contain;
+    margin-right: gutter() * 10;
+  }
+
+  &__text {
+    width: span(4 narrow of 12 narrow);
+    padding: gutter();
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  &__text {
+    width: span(4 narrow of 12 narrow);
+  }
+
+  &__socials {
+    width: span(4 narrow of 12 narrow);
+  }
+
+  &__socials ul li {
+    margin-right: gutter() * 3;
+    border: 1px dashed black;
+    padding: gutter();
+  }
+}
+
+@media (min-width: 30em) {
+  $susy: (
+    'columns': susy-repeat(6),
+    'gutters': 1rem,
+  );
+}

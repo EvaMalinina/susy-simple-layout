@@ -1,0 +1,82 @@
+* {
+  font-size: 20px;
+  background-color: #d6d6fa;
+  color: black; }
+
+body {
+  justify-content: center;
+  overflow: hidden; }
+
+ul {
+  list-style: none;
+  display: flex; }
+
+a {
+  text-decoration: none; }
+
+.wrapper {
+  width: 85%;
+  margin: 0 auto; }
+
+.header {
+  display: flex; }
+  .header__logo {
+    display: flex;
+    width: 100px;
+    height: 80px;
+    width: calc(0.25rem + ((100% - 2.75rem) / 12 * 2)); }
+  .header__pic {
+    max-width: 100%;
+    max-height: 100%; }
+  .header__menu {
+    margin: 0 0 0 auto; }
+  .header__menu ul li {
+    margin-right: 2.5rem;
+    width: calc(0.5rem + ((100% - 2.75rem) / 12 * 3)); }
+    .header__menu ul li:last-child {
+      margin-right: 0; }
+
+.info {
+  margin: 0 auto 1rem;
+  width: calc(2rem + ((100% - 2.75rem) / 12 * 9));
+  padding: 0.25rem;
+  display: flex; }
+
+[data-push="1"] {
+  margin-left: calc(0.25rem + ((100% - 2.75rem) / 12 * 1)); }
+
+[data-span="3"] {
+  width: calc(0.5rem + ((100% - 2.75rem) / 12 * 3)); }
+
+[data-span="4"] {
+  width: calc(0.75rem + ((100% - 2.75rem) / 12 * 4)); }
+
+.main__content {
+  display: flex; }
+.main__poster {
+  background-image: url("https://cdn.pixabay.com/photo/2013/07/13/13/12/raccoon-160556_960_720.png");
+  background-repeat: no-repeat;
+  width: calc(1.5rem + ((100% - 2.75rem) / 12 * 7));
+  height: 500px;
+  background-size: contain;
+  margin-right: 2.5rem; }
+.main__text {
+  width: calc(0.75rem + ((100% - 2.75rem) / 12 * 4));
+  padding: 0.25rem; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%; }
+  .footer__text {
+    width: calc(0.75rem + ((100% - 2.75rem) / 12 * 4)); }
+  .footer__socials {
+    width: calc(0.75rem + ((100% - 2.75rem) / 12 * 4)); }
+  .footer__socials ul li {
+    margin-right: 0.75rem;
+    border: 1px dashed black;
+    padding: 0.25rem; }
+
+/*# sourceMappingURL=index.css.map */
